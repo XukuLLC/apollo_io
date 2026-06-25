@@ -100,7 +100,10 @@ defmodule ApolloIo.Organization do
   ]
 
   @organization_match_url "/organizations/enrich"
-  @organization_search_url "/mixed_companies/search"
+  # /organizations/search is grantable on a scoped (least-privilege) key, unlike
+  # /mixed_companies/search which is master-key-only. Both return an
+  # "organizations" array with the same shape for our name->domain use.
+  @organization_search_url "/organizations/search"
 
   @doc """
   Query the endpoint.
