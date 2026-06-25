@@ -23,7 +23,7 @@ defmodule ApolloIo.MixProject do
   defp deps do
     [
       {:bypass, "~> 2.1.0", only: :test},
-      {:req, "~> 0.5.1"}
+      {:req, ">= 0.5.1"}
     ]
   end
 
